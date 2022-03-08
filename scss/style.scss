@@ -3,6 +3,10 @@
 
 @use 'function' as func;
 
+$bp: (
+  'sm': func.toRem(584px),
+);
+
 :root {
   --Soft-red: #fe7867;
   --Yellow: #fad400;
@@ -17,24 +21,26 @@
 }
 
 .hero {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
-  min-width: 100vw;
-  min-height: func.toRem(538px);
+  min-width: 100%;
+  min-height: clamp(func.toRem(538px), 28.95vw + 26.84rem, func.toRem(800px));
   background: url(../images/mobile/image-header.jpg) no-repeat center/cover;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
 
-  h1 {
-    font-size: func.toRem(40px);
-    color: var(--White);
-    text-align: center;
-    margin-bottom: func.toRem(52px);
+  @media (min-width: map-get($bp, 'sm')) {
+    background-image: url(../images/desktop/image-header.jpg);
   }
 
-  img {
+  h1 {
+    font-size: clamp(func.toRem(40px), 1.77vw + 2.09rem, func.toRem(56px));
+    letter-spacing: clamp(func.toRem(6.25px), 0.28vw + 0.33rem, func.toRem(8.75px));
+    color: var(--White);
+    text-align: center;
+    padding-top: clamp(9rem, 7.33vw + 6.33rem, 12.19rem);
+    padding-bottom: clamp(3.25rem, 4.74vw + 1.77rem, 6.03rem);
   }
 }

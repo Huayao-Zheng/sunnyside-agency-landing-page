@@ -22,6 +22,7 @@ body {
   min-height: 100vh;
   max-width: 90rem;
   margin: 0 auto;
+  position: relative;
 }
 
 .font-barlow {
@@ -48,11 +49,11 @@ body {
 }
 
 .hero {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
-  min-width: 100vw;
-  min-height: 33.625rem;
+  min-width: 100%;
+  min-height: clamp(33.625rem, 28.95vw + 26.84rem, 50rem);
   background: url(../images/mobile/image-header.jpg) no-repeat center/cover;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -61,16 +62,20 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
+@media (min-width: 36.5rem) {
+  .hero {
+    background-image: url(../images/desktop/image-header.jpg);
+  }
+}
 .hero h1 {
-  font-size: 2.5rem;
+  font-size: clamp(2.5rem, 1.77vw + 2.09rem, 3.5rem);
+  letter-spacing: clamp(0.390625rem, 0.28vw + 0.33rem, 0.546875rem);
   color: var(--White);
   text-align: center;
-  margin-bottom: 3.25rem;
+  padding-top: clamp(9rem, 7.33vw + 6.33rem, 12.19rem);
+  padding-bottom: clamp(3.25rem, 4.74vw + 1.77rem, 6.03rem);
 }/*# sourceMappingURL=style.css.map */
