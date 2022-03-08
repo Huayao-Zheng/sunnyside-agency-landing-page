@@ -1,0 +1,26 @@
+@use 'function' as func;
+
+*,
+*::after,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+body {
+  min-height: 100vh;
+  max-width: func.toRem(1440px);
+  margin: 0 auto;
+}

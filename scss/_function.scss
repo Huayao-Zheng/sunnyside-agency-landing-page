@@ -1,0 +1,10 @@
+@function toRem($pixels, $context: 16) {
+  @if (unitless($pixels)) {
+    $pixels: $pixels * 1px;
+  }
+  @if (unitless($context)) {
+    $context: $context * 1px;
+  }
+
+  @return calc($pixels / $context) * 1rem;
+}
