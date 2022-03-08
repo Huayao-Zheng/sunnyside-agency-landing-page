@@ -1,0 +1,26 @@
+@use 'function' as func;
+
+$bp: (
+  'sm': func.toRem(584px),
+  'md': func.toRem(768px),
+);
+
+@mixin mediaQuery($size) {
+  @media (min-width: map-get($bp, $size)) {
+    @content;
+  }
+}
+
+@mixin flex($jc: 'flex-start', $ai: 'initial') {
+  display: flex;
+  justify-content: $jc;
+  align-items: $ai;
+}
+
+@mixin contact-button($ft-color: '#000', $bg-color: '#fff') {
+  font-size: func.toRem(15px);
+  padding: 1rem 2rem;
+  border-radius: func.toRem(28px);
+  color: $ft-color;
+  background-color: $bg-color;
+}

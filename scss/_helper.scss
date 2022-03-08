@@ -1,17 +1,35 @@
-.font-barlow {
+@use 'function' as func;
+
+.ft-barlow {
   font-family: 'Barlow', sans-serif;
   font-weight: 600;
 }
 
-.font-fraunces {
+.ft-fraunces {
   font-family: 'Fraunces', serif;
   font-weight: 900;
 }
 
-.hide {
+.ft-w-700 {
+  font-weight: 700;
+}
+
+.visible {
+  visibility: visible;
+}
+
+.invisible {
   visibility: hidden;
 }
 
-.show {
-  visibility: visible;
+@media (min-width: func.toRem(768px)) {
+  .hide-for-desktop {
+    display: none !important;
+  }
+}
+
+@media (max-width: func.toRem(768px)) {
+  .hide-for-mobile {
+    display: none !important;
+  }
 }

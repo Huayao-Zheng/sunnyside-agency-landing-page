@@ -4,11 +4,11 @@ const hamburger = document.querySelector('.hamburger');
 hamburger.addEventListener('click', toggleMenu);
 
 function toggleMenu() {
-  if (mobileMenu.classList.contains('hide')) {
-    mobileMenu.classList.remove('hide');
-    mobileMenu.classList.add('show');
+  if (mobileMenu.classList.contains('invisible')) {
+    mobileMenu.classList.remove('invisible');
+    mobileMenu.classList.add('visible');
   } else {
-    mobileMenu.classList.remove('show');
-    mobileMenu.classList.add('hide');
+    mobileMenu.classList.remove('visible');
+    mobileMenu.classList.add('invisible');
   }
 }

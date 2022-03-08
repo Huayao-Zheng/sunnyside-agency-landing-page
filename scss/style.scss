@@ -1,17 +1,9 @@
 @use 'base';
+
 @use 'helper';
 
 @use 'function' as func;
-
-$bp: (
-  'sm': func.toRem(584px),
-);
-
-@mixin mediaQuery($size) {
-  @media (min-width: map-get($bp, $size)) {
-    @content;
-  }
-}
+@use 'mixin' as mix;
 
 :root {
   --Soft-red: #fe7867;
@@ -26,7 +18,9 @@ $bp: (
   --White: #ffffff;
 }
 
-// ======================================== Header ========================================//
+// ======================================================================================//
+// ======================================== Header ======================================//
+// ======================================================================================//
 header {
   display: flex;
   justify-content: space-between;
@@ -38,7 +32,7 @@ header {
     cursor: pointer;
   }
 
-  nav {
+  .mobile-menu {
     position: absolute;
     top: func.toRem(106px);
     left: 50%;
@@ -50,24 +44,42 @@ header {
     align-items: center;
     gap: func.toRem(32px);
     padding: func.toRem(32px);
+
+    .cta {
+      font-size: func.toRem(20px);
+      line-height: func.toRem(25px);
+      letter-spacing: func.toRem(-0.14px);
+      color: var(--Dark-grayish-blue);
+
+      &-yellow {
+        @include mix.contact-button(var(--Very-dark-desaturated-blue), var(--Yellow));
+      }
+    }
   }
 
-  .cta {
-    font-size: func.toRem(20px);
-    line-height: func.toRem(25px);
-    letter-spacing: func.toRem(-0.14px);
-    color: var(--Dark-grayish-blue);
+  .desktop-nav {
+    .cta:not(:first-child) {
+      margin-left: func.toRem(47px);
+    }
 
-    &-yellow {
-      color: var(--Very-dark-desaturated-blue);
-      background-color: var(--Yellow);
-      padding: 1rem 2rem;
-      border-radius: func.toRem(28px);
+    .cta {
+      color: var(--White);
+
+      &-white {
+        @include mix.contact-button(var(--Very-dark-desaturated-blue), var(--White));
+        transition: all 0.2s ease-in-out;
+
+        &:hover {
+          color: var(--White);
+          background-color: #77cdf5;
+        }
+      }
     }
   }
 }
-
+// ======================================================================================//
 // ======================================== Hero ========================================//
+// ======================================================================================//
 .hero {
   position: absolute;
   top: 0;
@@ -80,7 +92,7 @@ header {
   background: url(../images/mobile/image-header.jpg) no-repeat center/cover;
   z-index: -10;
 
-  @include mediaQuery('sm') {
+  @include mix.mediaQuery('sm') {
     background-image: url(../images/desktop/image-header.jpg);
   }
 

@@ -11,21 +11,34 @@
     <title>Frontend Mentor | Sunnyside agency landing page</title>
   </head>
   <body>
+    <!-- header -->
     <header>
+      <!-- logo -->
       <img src="images/logo.svg" alt="logo" />
-
-      <img src="images/icon-hamburger.svg" alt="hamburger" class="hamburger" />
-
-      <nav class="font-barlow mobile-menu">
+      <!-- hamburger -->
+      <img src="images/icon-hamburger.svg" alt="hamburger" class="hamburger hide-for-desktop" />
+      <!-- mobile menu -->
+      <nav class="mobile-menu ft-barlow invisible hide-for-desktop">
         <a href="#" class="cta">About</a>
         <a href="#" class="cta">Services</a>
         <a href="#" class="cta">Projects</a>
-        <a href="#" class="cta cta-yellow font-fraunces">CONTACT</a>
+        <a href="#" class="cta cta-yellow ft-fraunces ft-w-700">CONTACT</a>
       </nav>
+
+      <!-- desktop nav -->
+      <nav class="desktop-nav ft-barlow hide-for-mobile">
+        <a href="#" class="cta">About</a>
+        <a href="#" class="cta">Services</a>
+        <a href="#" class="cta">Projects</a>
+        <a href="#" class="cta cta-white ft-fraunces ft-w-700">CONTACT</a>
+      </nav>
+
+      <!-- <nav></nav> -->
     </header>
 
-    <section class="hero">
-      <h1 class="font-fraunces">WE ARE CREATIVES</h1>
+    <!-- Hero -->
+    <section class="hero ft-fraunces">
+      <h1>WE ARE CREATIVES</h1>
       <img src="images/icon-arrow-down.svg" alt="arrow down" />
     </section>
 

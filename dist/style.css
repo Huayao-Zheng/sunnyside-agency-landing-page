@@ -29,24 +29,38 @@ body {
   position: relative;
 }
 
-.font-barlow {
+.ft-barlow {
   font-family: "Barlow", sans-serif;
   font-weight: 600;
 }
 
-.font-fraunces {
+.ft-fraunces {
   font-family: "Fraunces", serif;
   font-weight: 900;
 }
 
-.hide {
-  visibility: hidden;
+.ft-w-700 {
+  font-weight: 700;
 }
 
-.show {
+.visible {
   visibility: visible;
 }
 
+.invisible {
+  visibility: hidden;
+}
+
+@media (min-width: 48rem) {
+  .hide-for-desktop {
+    display: none !important;
+  }
+}
+@media (max-width: 48rem) {
+  .hide-for-mobile {
+    display: none !important;
+  }
+}
 :root {
   --Soft-red: #fe7867;
   --Yellow: #fad400;
@@ -76,7 +90,7 @@ header {
 header .hamburger {
   cursor: pointer;
 }
-header nav {
+header .mobile-menu {
   position: absolute;
   top: 6.625rem;
   left: 50%;
@@ -97,17 +111,37 @@ header nav {
   gap: 2rem;
   padding: 2rem;
 }
-header .cta {
+header .mobile-menu .cta {
   font-size: 1.25rem;
   line-height: 1.5625rem;
   letter-spacing: -0.00875rem;
   color: var(--Dark-grayish-blue);
 }
-header .cta-yellow {
-  color: var(--Very-dark-desaturated-blue);
-  background-color: var(--Yellow);
+header .mobile-menu .cta-yellow {
+  font-size: 0.9375rem;
   padding: 1rem 2rem;
   border-radius: 1.75rem;
+  color: var(--Very-dark-desaturated-blue);
+  background-color: var(--Yellow);
+}
+header .desktop-nav .cta:not(:first-child) {
+  margin-left: 2.9375rem;
+}
+header .desktop-nav .cta {
+  color: var(--White);
+}
+header .desktop-nav .cta-white {
+  font-size: 0.9375rem;
+  padding: 1rem 2rem;
+  border-radius: 1.75rem;
+  color: var(--Very-dark-desaturated-blue);
+  background-color: var(--White);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+header .desktop-nav .cta-white:hover {
+  color: var(--White);
+  background-color: #77cdf5;
 }
 
 .hero {
