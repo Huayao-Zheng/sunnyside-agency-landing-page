@@ -12,6 +12,10 @@ ol[role=list] {
   list-style: none;
 }
 
+a {
+  text-decoration: none;
+}
+
 img,
 picture {
   max-width: 100%;
@@ -35,6 +39,14 @@ body {
   font-weight: 900;
 }
 
+.hide {
+  visibility: hidden;
+}
+
+.show {
+  visibility: visible;
+}
+
 :root {
   --Soft-red: #fe7867;
   --Yellow: #fad400;
@@ -48,13 +60,30 @@ body {
   --White: #ffffff;
 }
 
-.hero {
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 2rem 1.5rem;
+  position: relative;
+}
+header .hamburger {
+  cursor: pointer;
+}
+header nav {
   position: absolute;
-  top: 0;
-  left: 0;
-  min-width: 100%;
-  min-height: clamp(33.625rem, 28.95vw + 26.84rem, 50rem);
-  background: url(../images/mobile/image-header.jpg) no-repeat center/cover;
+  top: 6.625rem;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: calc(100% - 3rem);
+  background-color: var(--White);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -65,6 +94,40 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  gap: 2rem;
+  padding: 2rem;
+}
+header .cta {
+  font-size: 1.25rem;
+  line-height: 1.5625rem;
+  letter-spacing: -0.00875rem;
+  color: var(--Dark-grayish-blue);
+}
+header .cta-yellow {
+  color: var(--Very-dark-desaturated-blue);
+  background-color: var(--Yellow);
+  padding: 1rem 2rem;
+  border-radius: 1.75rem;
+}
+
+.hero {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: clamp(33.625rem, 28.95vw + 26.84rem, 50rem);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: url(../images/mobile/image-header.jpg) no-repeat center/cover;
+  z-index: -10;
 }
 @media (min-width: 36.5rem) {
   .hero {

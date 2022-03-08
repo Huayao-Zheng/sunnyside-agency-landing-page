@@ -1,11 +1,17 @@
 @use 'base';
-@use 'font';
+@use 'helper';
 
 @use 'function' as func;
 
 $bp: (
   'sm': func.toRem(584px),
 );
+
+@mixin mediaQuery($size) {
+  @media (min-width: map-get($bp, $size)) {
+    @content;
+  }
+}
 
 :root {
   --Soft-red: #fe7867;
@@ -20,18 +26,61 @@ $bp: (
   --White: #ffffff;
 }
 
+// ======================================== Header ========================================//
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: func.toRem(32px) func.toRem(24px);
+  position: relative;
+
+  .hamburger {
+    cursor: pointer;
+  }
+
+  nav {
+    position: absolute;
+    top: func.toRem(106px);
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - func.toRem(48px));
+    background-color: var(--White);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: func.toRem(32px);
+    padding: func.toRem(32px);
+  }
+
+  .cta {
+    font-size: func.toRem(20px);
+    line-height: func.toRem(25px);
+    letter-spacing: func.toRem(-0.14px);
+    color: var(--Dark-grayish-blue);
+
+    &-yellow {
+      color: var(--Very-dark-desaturated-blue);
+      background-color: var(--Yellow);
+      padding: 1rem 2rem;
+      border-radius: func.toRem(28px);
+    }
+  }
+}
+
+// ======================================== Hero ========================================//
 .hero {
   position: absolute;
   top: 0;
   left: 0;
   min-width: 100%;
   min-height: clamp(func.toRem(538px), 28.95vw + 26.84rem, func.toRem(800px));
-  background: url(../images/mobile/image-header.jpg) no-repeat center/cover;
   display: flex;
   flex-direction: column;
   align-items: center;
+  background: url(../images/mobile/image-header.jpg) no-repeat center/cover;
+  z-index: -10;
 
-  @media (min-width: map-get($bp, 'sm')) {
+  @include mediaQuery('sm') {
     background-image: url(../images/desktop/image-header.jpg);
   }
 
