@@ -26,11 +26,19 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: func.toRem(32px) func.toRem(24px);
+  padding-top: clamp(2rem, 3.56vw + 1.17rem, 2.88rem);
+  padding-right: clamp(1.5rem, 1.99vw + 1.41rem, 3rem);
+  padding-bottom: func.toRem(32px);
+  padding-left: clamp(1.5rem, 1.99vw + 1.41rem, 3rem);
   position: relative;
 
+  .logo,
   .hamburger {
     cursor: pointer;
+  }
+
+  .logo {
+    height: clamp(1.5rem, 2.29vw + 0.96rem, 2.06rem);
   }
 
   .mobile-menu {
@@ -87,7 +95,7 @@ header {
   top: 0;
   left: 0;
   min-width: 100%;
-  min-height: clamp(33.63rem, 28.95vw + 26.84rem, 50rem);
+  min-height: clamp(33.63rem, 66.67vw + 18rem, 50rem);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -112,7 +120,7 @@ header {
 // ======================================== about =======================================//
 // ======================================================================================//
 .about {
-  margin-top: clamp(28.13rem, 28.95vw + 21.34rem, 44.5rem);
+  margin-top: clamp(28.13rem, 60.81vw + 13.87rem, 43.06rem);
   display: grid;
   place-items: center;
   grid-template-rows: func.toRem(312px) 1fr func.toRem(312px) 1fr func.toRem(600px) func.toRem(600px);

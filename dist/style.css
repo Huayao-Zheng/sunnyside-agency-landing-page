@@ -97,11 +97,18 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 2rem 1.5rem;
+  padding-top: clamp(2rem, 3.56vw + 1.17rem, 2.88rem);
+  padding-right: clamp(1.5rem, 1.99vw + 1.41rem, 3rem);
+  padding-bottom: 2rem;
+  padding-left: clamp(1.5rem, 1.99vw + 1.41rem, 3rem);
   position: relative;
 }
+header .logo,
 header .hamburger {
   cursor: pointer;
+}
+header .logo {
+  height: clamp(1.5rem, 2.29vw + 0.96rem, 2.06rem);
 }
 header .mobile-menu {
   position: absolute;
@@ -162,7 +169,7 @@ header .desktop-nav .cta-white:hover {
   top: 0;
   left: 0;
   min-width: 100%;
-  min-height: clamp(33.63rem, 28.95vw + 26.84rem, 50rem);
+  min-height: clamp(33.63rem, 66.67vw + 18rem, 50rem);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -191,7 +198,7 @@ header .desktop-nav .cta-white:hover {
 }
 
 .about {
-  margin-top: clamp(28.13rem, 28.95vw + 21.34rem, 44.5rem);
+  margin-top: clamp(28.13rem, 60.81vw + 13.87rem, 43.06rem);
   display: grid;
   place-items: center;
   grid-template-rows: 19.5rem 1fr 19.5rem 1fr 37.5rem 37.5rem;
