@@ -213,3 +213,60 @@ header {
 // ======================================================================================//
 // ======================================== Testimonial =================================//
 // ======================================================================================//
+
+.testimonials {
+  text-align: center;
+  padding: func.toRem(64px) func.toRem(24px);
+
+  h4 {
+    color: var(--Grayish-blue);
+    font-size: clamp(1rem, 0.45vw + 0.89rem, 1.25rem);
+    letter-spacing: clamp(0.25rem, 0.11vw + 0.22rem, 0.31rem);
+    margin-bottom: func.toRem(81px);
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: func.toRem(64px);
+
+    @include mix.mediaQuery('md') {
+      flex-direction: row;
+      justify-content: center;
+      gap: func.toRem(30px);
+    }
+  }
+
+  &__client-avatar {
+    border-radius: 50%;
+    margin: 0 auto func.toRem(32px) auto;
+
+    @include mix.mediaQuery('md') {
+      margin-bottom: func.toRem(58px);
+    }
+  }
+
+  &__client-review {
+    font-size: func.toRem(18px);
+    line-height: func.toRem(32px);
+    letter-spacing: func.toRem(-0.13px);
+    color: var(--Very-dark-grayish-blue);
+    max-width: 350px;
+    margin: 0 auto func.toRem(32px) auto;
+  }
+
+  &__client-name {
+    font-size: func.toRem(18px);
+    line-height: func.toRem(22px);
+    letter-spacing: func.toRem(-0.13px);
+    color: var(--Very-dark-desaturated-blue);
+    margin-bottom: func.toRem(9px);
+  }
+
+  &__client-position {
+    font-size: func.toRem(14px);
+    line-height: func.toRem(25px);
+    letter-spacing: func.toRem(-0.1px);
+    color: var(--Grayish-blue);
+  }
+}

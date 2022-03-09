@@ -220,8 +220,8 @@ header .desktop-nav .cta-white:hover {
 .about .stand-out p {
   color: var(--Dark-grayish-blue);
   font-size: 1.125rem;
-  line-height: 30px;
-  letter-spacing: -0.128571px;
+  line-height: 1.875rem;
+  letter-spacing: -0.0080356875rem;
   margin-bottom: 2rem;
 }
 .about .transform .learn-more-btn--yelow {
@@ -351,4 +351,67 @@ header .desktop-nav .cta-white:hover {
   font-size: 1rem;
   line-height: 1.6875rem;
   letter-spacing: -0.006875rem;
+}
+
+.testimonials {
+  text-align: center;
+  padding: 4rem 1.5rem;
+}
+.testimonials h4 {
+  color: var(--Grayish-blue);
+  font-size: clamp(1rem, 0.45vw + 0.89rem, 1.25rem);
+  letter-spacing: clamp(0.25rem, 0.11vw + 0.22rem, 0.31rem);
+  margin-bottom: 5.0625rem;
+}
+.testimonials .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 4rem;
+}
+@media (min-width: 48rem) {
+  .testimonials .container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    gap: 1.875rem;
+  }
+}
+.testimonials__client-avatar {
+  border-radius: 50%;
+  margin: 0 auto 2rem auto;
+}
+@media (min-width: 48rem) {
+  .testimonials__client-avatar {
+    margin-bottom: 3.625rem;
+  }
+}
+.testimonials__client-review {
+  font-size: 1.125rem;
+  line-height: 2rem;
+  letter-spacing: -0.008125rem;
+  color: var(--Very-dark-grayish-blue);
+  max-width: 350px;
+  margin: 0 auto 2rem auto;
+}
+.testimonials__client-name {
+  font-size: 1.125rem;
+  line-height: 1.375rem;
+  letter-spacing: -0.008125rem;
+  color: var(--Very-dark-desaturated-blue);
+  margin-bottom: 0.5625rem;
+}
+.testimonials__client-position {
+  font-size: 0.875rem;
+  line-height: 1.5625rem;
+  letter-spacing: -0.00625rem;
+  color: var(--Grayish-blue);
 }/*# sourceMappingURL=style.css.map */
