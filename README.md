@@ -11,8 +11,8 @@ Users should be able to:
 
 ### Links
 
-- [Live]()
-- [Solution]()
+- [Live](https://sunnysidelandingfem.netlify.app/)
+- [Solution](https://www.frontendmentor.io/solutions/htmlcssjsscss-wEhcBdup6)
 
 ### Built with
 

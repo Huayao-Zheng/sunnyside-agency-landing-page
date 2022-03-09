@@ -135,6 +135,7 @@ header {
       line-height: clamp(2.44rem, 2.63vw + 1.82rem, 3.08rem);
       letter-spacing: func.toRem(-0.23px);
       margin-bottom: 1.5rem;
+      font-weight: 900;
     }
 
     p {
@@ -219,6 +220,11 @@ header {
   text-align: center;
   padding: func.toRem(64px) func.toRem(24px);
 
+  @include mix.mediaQuery('md') {
+    padding-top: func.toRem(160px);
+    padding-bottom: func.toRem(160px);
+  }
+
   h4 {
     color: var(--Grayish-blue);
     font-size: clamp(1rem, 0.45vw + 0.89rem, 1.25rem);
@@ -239,6 +245,8 @@ header {
   }
 
   &__client-avatar {
+    width: func.toRem(72px);
+    height: func.toRem(72px);
     border-radius: 50%;
     margin: 0 auto func.toRem(32px) auto;
 
@@ -299,6 +307,8 @@ footer {
   position: relative;
 
   .logo {
+    width: func.toRem(170px);
+    height: func.toRem(33px);
     margin-bottom: func.toRem(40px);
 
     & > path {

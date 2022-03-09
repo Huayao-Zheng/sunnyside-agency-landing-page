@@ -216,6 +216,7 @@ header .desktop-nav .cta-white:hover {
   line-height: clamp(2.44rem, 2.63vw + 1.82rem, 3.08rem);
   letter-spacing: -0.014375rem;
   margin-bottom: 1.5rem;
+  font-weight: 900;
 }
 .about .transform p,
 .about .stand-out p {
@@ -358,6 +359,12 @@ header .desktop-nav .cta-white:hover {
   text-align: center;
   padding: 4rem 1.5rem;
 }
+@media (min-width: 48rem) {
+  .testimonials {
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+  }
+}
 .testimonials h4 {
   color: var(--Grayish-blue);
   font-size: clamp(1rem, 0.45vw + 0.89rem, 1.25rem);
@@ -387,6 +394,8 @@ header .desktop-nav .cta-white:hover {
   }
 }
 .testimonials__client-avatar {
+  width: 4.5rem;
+  height: 4.5rem;
   border-radius: 50%;
   margin: 0 auto 2rem auto;
 }
@@ -440,6 +449,8 @@ footer {
   position: relative;
 }
 footer .logo {
+  width: 10.625rem;
+  height: 2.0625rem;
   margin-bottom: 2.5rem;
 }
 footer .logo > path {
