@@ -14,6 +14,18 @@ ol[role=list] {
 
 a {
   text-decoration: none;
+  -webkit-transition: outline 0.2s;
+  transition: outline 0.2s;
+  border-radius: 2px;
+  padding: 0.5rem 1rem;
+}
+a:focus {
+  outline: dashed;
+}
+
+button {
+  font-family: inherit;
+  font-weight: inherit;
 }
 
 img,
@@ -124,11 +136,11 @@ header .mobile-menu .cta-yellow {
   color: var(--Very-dark-desaturated-blue);
   background-color: var(--Yellow);
 }
-header .desktop-nav .cta:not(:first-child) {
-  margin-left: 2.9375rem;
-}
 header .desktop-nav .cta {
   color: var(--White);
+}
+header .desktop-nav .cta:not(:last-child) {
+  margin-right: 1.9375rem;
 }
 header .desktop-nav .cta-white {
   font-size: 0.9375rem;
@@ -149,7 +161,7 @@ header .desktop-nav .cta-white:hover {
   top: 0;
   left: 0;
   min-width: 100%;
-  min-height: clamp(33.625rem, 28.95vw + 26.84rem, 50rem);
+  min-height: clamp(33.63rem, 28.95vw + 26.84rem, 50rem);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -175,4 +187,124 @@ header .desktop-nav .cta-white:hover {
   text-align: center;
   padding-top: clamp(9rem, 7.33vw + 6.33rem, 12.19rem);
   padding-bottom: clamp(3.25rem, 4.74vw + 1.77rem, 6.03rem);
+}
+
+.about {
+  margin-top: clamp(28.13rem, 28.95vw + 21.34rem, 44.5rem);
+  display: grid;
+  place-items: center;
+  grid-template-rows: 19.5rem 1fr 19.5rem 1fr 37.5rem 37.5rem;
+  text-align: center;
+}
+@media (min-width: 48rem) {
+  .about {
+    grid-template-rows: repeat(3, minmax(312px, 600px));
+    grid-template-columns: repeat(2, minmax(375px, 1fr));
+    text-align: left;
+  }
+}
+.about .transform,
+.about .stand-out {
+  padding: 4rem 1.5rem;
+  max-width: 30.8125rem;
+}
+.about .transform h2,
+.about .stand-out h2 {
+  color: var(--Very-dark-desaturated-blue);
+  font-size: clamp(2rem, 2.04vw + 1.52rem, 2.5rem);
+  line-height: clamp(2.44rem, 2.63vw + 1.82rem, 3.08rem);
+  letter-spacing: -0.014375rem;
+  margin-bottom: 1.5rem;
+}
+.about .transform p,
+.about .stand-out p {
+  color: var(--Dark-grayish-blue);
+  font-size: 1.125rem;
+  line-height: 30px;
+  letter-spacing: -0.128571px;
+  margin-bottom: 2rem;
+}
+.about .learn-more-btn--yelow {
+  font-size: 0.9375rem;
+  letter-spacing: 0.0625rem;
+  border: 0;
+  padding: 0 0.5rem;
+  height: 1.5625rem;
+  background-color: transparent;
+  color: var(--Very-dark-desaturated-blue);
+  cursor: pointer;
+  position: relative;
+}
+.about .learn-more-btn--yelow::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0.625rem;
+  background-color: var(--Yellow);
+  border-radius: 1.75rem;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+  z-index: -10;
+}
+.about .learn-more-btn--yelow:hover::before {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+}
+.about .learn-more-btn--red {
+  font-size: 0.9375rem;
+  letter-spacing: 0.0625rem;
+  border: 0;
+  padding: 0 0.5rem;
+  height: 1.5625rem;
+  background-color: transparent;
+  color: var(--Very-dark-desaturated-blue);
+  cursor: pointer;
+  position: relative;
+}
+.about .learn-more-btn--red::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0.625rem;
+  background-color: var(--Soft-red);
+  border-radius: 1.75rem;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+  z-index: -10;
+}
+.about .learn-more-btn--red:hover::before {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+}
+.about .egg-bg,
+.about .cup-bg,
+.about .design-bg,
+.about .photography-bg {
+  width: 100%;
+  height: 100%;
+  background: no-repeat center/cover;
+}
+.about .egg-bg {
+  background-image: url(../images/mobile/image-transform.jpg);
+}
+.about .cup-bg {
+  background-image: url(../images/desktop/image-stand-out.jpg);
+}
+.about .design-bg {
+  background-image: url(../images/desktop/image-graphic-design.jpg);
+}
+.about .photography-bg {
+  background-image: url(../images/desktop/image-photography.jpg);
 }/*# sourceMappingURL=style.css.map */
