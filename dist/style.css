@@ -84,6 +84,7 @@ body {
   --Dark-grayish-blue: #818498;
   --Grayish-blue: #a7abae;
   --White: #ffffff;
+  --footer-bg: #90d4c6;
 }
 
 header {
@@ -430,4 +431,52 @@ header .desktop-nav .cta-white:hover {
   .photos img {
     width: 25%;
   }
+}
+
+footer {
+  background-color: var(--footer-bg);
+  padding: 4rem 0 5rem 0;
+  text-align: center;
+}
+footer .logo {
+  margin-bottom: 2.5rem;
+}
+footer .logo > path {
+  fill: var(--Dark-desaturated-cyan);
+}
+footer nav {
+  margin-bottom: 5.5rem;
+}
+@media (min-width: 48rem) {
+  footer nav {
+    margin-bottom: 5.5rem;
+  }
+}
+footer nav a {
+  font-size: 1.125rem;
+  line-height: 1.5625rem;
+  letter-spacing: -0.008125rem;
+  color: var(--Dark-moderate-cyan);
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+footer nav a:hover {
+  color: var(--White);
+}
+footer .socials :not(:last-child) {
+  margin-right: 1.75rem;
+}
+footer .socials svg {
+  cursor: pointer;
+}
+footer .socials svg:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+footer .socials svg:hover > path {
+  fill: var(--White);
+}
+footer .socials svg, footer .socials svg > path {
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
 }/*# sourceMappingURL=style.css.map */

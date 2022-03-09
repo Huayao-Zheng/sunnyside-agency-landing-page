@@ -16,6 +16,7 @@
   --Dark-grayish-blue: #818498;
   --Grayish-blue: #a7abae;
   --White: #ffffff;
+  --footer-bg: #90d4c6;
 }
 
 // ======================================================================================//
@@ -283,6 +284,66 @@ header {
 
     @include mix.mediaQuery('md') {
       width: 25%;
+    }
+  }
+}
+
+// ======================================================================================//
+// ======================================== Footer =================================//
+// ======================================================================================//
+
+footer {
+  background-color: var(--footer-bg);
+  padding: func.toRem(64px) 0 func.toRem(80px) 0;
+  text-align: center;
+
+  .logo {
+    margin-bottom: func.toRem(40px);
+
+    & > path {
+      fill: var(--Dark-desaturated-cyan);
+    }
+  }
+
+  nav {
+    margin-bottom: func.toRem(88px);
+    @include mix.mediaQuery('md') {
+      margin-bottom: func.toRem(88px);
+    }
+
+    a {
+      font-size: func.toRem(18px);
+      line-height: func.toRem(25px);
+      letter-spacing: func.toRem(-0.13px);
+      color: var(--Dark-moderate-cyan);
+      transition: all 0.2s linear;
+
+      &:hover {
+        color: var(--White);
+      }
+    }
+  }
+
+  .socials {
+    & :not(:last-child) {
+      margin-right: func.toRem(28px);
+    }
+
+    svg {
+      cursor: pointer;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+
+      &:hover > path {
+        fill: var(--White);
+      }
+
+      &,
+      & > path {
+        transition: all 0.2s linear;
+      }
     }
   }
 }
