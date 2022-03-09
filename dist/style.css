@@ -224,7 +224,7 @@ header .desktop-nav .cta-white:hover {
   letter-spacing: -0.128571px;
   margin-bottom: 2rem;
 }
-.about .learn-more-btn--yelow {
+.about .transform .learn-more-btn--yelow {
   font-size: 0.9375rem;
   letter-spacing: 0.0625rem;
   border: 0;
@@ -235,7 +235,7 @@ header .desktop-nav .cta-white:hover {
   cursor: pointer;
   position: relative;
 }
-.about .learn-more-btn--yelow::before {
+.about .transform .learn-more-btn--yelow::before {
   content: "";
   position: absolute;
   bottom: 0;
@@ -252,11 +252,11 @@ header .desktop-nav .cta-white:hover {
   transition: transform 0.3s ease, -webkit-transform 0.3s ease;
   z-index: -10;
 }
-.about .learn-more-btn--yelow:hover::before {
+.about .transform .learn-more-btn--yelow:hover::before {
   -webkit-transform: scaleX(1);
           transform: scaleX(1);
 }
-.about .learn-more-btn--red {
+.about .stand-out .learn-more-btn--red {
   font-size: 0.9375rem;
   letter-spacing: 0.0625rem;
   border: 0;
@@ -267,7 +267,7 @@ header .desktop-nav .cta-white:hover {
   cursor: pointer;
   position: relative;
 }
-.about .learn-more-btn--red::before {
+.about .stand-out .learn-more-btn--red::before {
   content: "";
   position: absolute;
   bottom: 0;
@@ -284,7 +284,7 @@ header .desktop-nav .cta-white:hover {
   transition: transform 0.3s ease, -webkit-transform 0.3s ease;
   z-index: -10;
 }
-.about .learn-more-btn--red:hover::before {
+.about .stand-out .learn-more-btn--red:hover::before {
   -webkit-transform: scaleX(1);
           transform: scaleX(1);
 }
@@ -296,15 +296,59 @@ header .desktop-nav .cta-white:hover {
   height: 100%;
   background: no-repeat center/cover;
 }
+@media (min-width: 48rem) {
+  .about .transform {
+    grid-row: 1/2;
+  }
+}
 .about .egg-bg {
   background-image: url(../images/mobile/image-transform.jpg);
+}
+@media (min-width: 48rem) {
+  .about .egg-bg {
+    grid-column: 2/3;
+  }
 }
 .about .cup-bg {
   background-image: url(../images/desktop/image-stand-out.jpg);
 }
 .about .design-bg {
   background-image: url(../images/desktop/image-graphic-design.jpg);
+  color: var(--Dark-desaturated-cyan);
 }
 .about .photography-bg {
   background-image: url(../images/desktop/image-photography.jpg);
+  color: var(--Dark-blue);
+}
+.about .design-bg,
+.about .photography-bg {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1.6875rem;
+  text-align: center;
+  padding-bottom: 3.6875rem;
+}
+.about .design-bg h3,
+.about .photography-bg h3 {
+  font-size: 1.75rem;
+  line-height: 2.1875rem;
+  letter-spacing: -0.0125rem;
+}
+.about .design-bg p,
+.about .photography-bg p {
+  max-width: 21.1875rem;
+  font-size: 1rem;
+  line-height: 1.6875rem;
+  letter-spacing: -0.006875rem;
 }/*# sourceMappingURL=style.css.map */

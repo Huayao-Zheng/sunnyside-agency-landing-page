@@ -114,7 +114,6 @@ header {
   margin-top: clamp(28.13rem, 28.95vw + 21.34rem, 44.5rem);
   display: grid;
   place-items: center;
-  // grid-template-rows: func.toRem(312px) func.toRem(437px) func.toRem(312px) func.toRem(437px) func.toRem(600px) func.toRem(600px);
   grid-template-rows: func.toRem(312px) 1fr func.toRem(312px) 1fr func.toRem(600px) func.toRem(600px);
   text-align: center;
 
@@ -140,16 +139,16 @@ header {
     p {
       color: var(--Dark-grayish-blue);
       font-size: func.toRem(18px);
-      line-height: 30px;
-      letter-spacing: -0.128571px;
+      line-height: func.toRem(30px);
+      letter-spacing: func.toRem(-0.128571px);
       margin-bottom: 2rem;
     }
   }
 
-  .learn-more-btn--yelow {
+  .transform .learn-more-btn--yelow {
     @include mix.learn-more-style(var(--Very-dark-desaturated-blue), var(--Yellow));
   }
-  .learn-more-btn--red {
+  .stand-out .learn-more-btn--red {
     @include mix.learn-more-style(var(--Very-dark-desaturated-blue), var(--Soft-red));
   }
 
@@ -161,16 +160,56 @@ header {
     height: 100%;
     background: no-repeat center/cover;
   }
+
+  .transform {
+    @include mix.mediaQuery('md') {
+      grid-row: 1 / 2;
+    }
+  }
   .egg-bg {
     background-image: url(../images/mobile/image-transform.jpg);
+
+    @include mix.mediaQuery('md') {
+      grid-column: 2 / 3;
+    }
   }
   .cup-bg {
     background-image: url(../images/desktop/image-stand-out.jpg);
   }
   .design-bg {
     background-image: url(../images/desktop/image-graphic-design.jpg);
+    color: var(--Dark-desaturated-cyan);
   }
   .photography-bg {
     background-image: url(../images/desktop/image-photography.jpg);
+    color: var(--Dark-blue);
+  }
+
+  .design-bg,
+  .photography-bg {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    gap: func.toRem(27px);
+    text-align: center;
+    padding-bottom: func.toRem(59px);
+
+    h3 {
+      font-size: func.toRem(28px);
+      line-height: func.toRem(35px);
+      letter-spacing: func.toRem(-0.2px);
+    }
+
+    p {
+      max-width: func.toRem(339px);
+      font-size: 1rem;
+      line-height: func.toRem(27px);
+      letter-spacing: func.toRem(-0.11px);
+    }
   }
 }
+
+// ======================================================================================//
+// ======================================== Testimonial =================================//
+// ======================================================================================//
