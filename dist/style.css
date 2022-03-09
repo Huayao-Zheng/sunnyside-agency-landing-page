@@ -437,6 +437,7 @@ footer {
   background-color: var(--footer-bg);
   padding: 4rem 0 5rem 0;
   text-align: center;
+  position: relative;
 }
 footer .logo {
   margin-bottom: 2.5rem;
@@ -479,4 +480,19 @@ footer .socials svg:hover > path {
 footer .socials svg, footer .socials svg > path {
   -webkit-transition: all 0.2s linear;
   transition: all 0.2s linear;
+}
+footer .attr {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 100%;
+  color: var(--Dark-moderate-cyan);
+  letter-spacing: 0.5px;
+  padding-bottom: 1rem;
+}
+footer .attr a {
+  padding: 0;
+  color: var(--Dark-desaturated-cyan);
 }/*# sourceMappingURL=style.css.map */

@@ -296,6 +296,7 @@ footer {
   background-color: var(--footer-bg);
   padding: func.toRem(64px) 0 func.toRem(80px) 0;
   text-align: center;
+  position: relative;
 
   .logo {
     margin-bottom: func.toRem(40px);
@@ -344,6 +345,22 @@ footer {
       & > path {
         transition: all 0.2s linear;
       }
+    }
+  }
+
+  .attr {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    color: var(--Dark-moderate-cyan);
+    letter-spacing: 0.5px;
+    padding-bottom: 1rem;
+
+    a {
+      padding: 0;
+      color: var(--Dark-desaturated-cyan);
     }
   }
 }

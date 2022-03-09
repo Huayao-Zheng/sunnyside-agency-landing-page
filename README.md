@@ -8,3 +8,19 @@ Users should be able to:
 ### Screenshot
 
 ![](./screenshot.jpg)
+
+### Links
+
+- [Live]()
+- [Solution]()
+
+### Built with
+
+- HTML5
+- CSS3
+- Javascript
+- Sass
+
+## Author
+
+- Frontend Mentor - [@Henryzheng](https://www.frontendmentor.io/profile/LonelyBuddy)
