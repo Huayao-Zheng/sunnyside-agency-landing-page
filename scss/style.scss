@@ -270,6 +270,10 @@ header {
     color: var(--Very-dark-grayish-blue);
     max-width: 350px;
     margin: 0 auto func.toRem(32px) auto;
+
+    @include mix.mediaQuery('md') {
+      margin-bottom: func.toRem(69px);
+    }
   }
 
   &__client-name {
