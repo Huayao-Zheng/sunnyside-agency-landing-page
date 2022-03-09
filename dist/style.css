@@ -414,4 +414,20 @@ header .desktop-nav .cta-white:hover {
   line-height: 1.5625rem;
   letter-spacing: -0.00625rem;
   color: var(--Grayish-blue);
+}
+
+.photos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.photos img {
+  width: 50%;
+}
+@media (min-width: 48rem) {
+  .photos img {
+    width: 25%;
+  }
 }/*# sourceMappingURL=style.css.map */
